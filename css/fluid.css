@@ -1,0 +1,80 @@
+/* --- CSS FILE: css/fluid.css --- */
+
+/* Deep Contrast Theme (Google/Apple Dark Mode Aesthetic) */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #12121e; /* Deep Navy Background */
+    font-family: 'Roboto', sans-serif; /* Clean, modern typeface */
+    color: #f0f0f0; /* Clear White Text */
+    cursor: default;
+}
+
+/* SVG and UI Overlay Positioning */
+#metaball-svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ensure the SVG itself is transparent to see the body background */
+    background: transparent; 
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none; /* Allows mouse events to pass through to the SVG */
+    z-index: 10;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for text pop */
+}
+
+#ui-overlay h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #88ccee; /* Primary Cyan Accent */
+    margin-bottom: 0.1em;
+}
+
+#ui-overlay p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Detail Panel Styling */
+#detail-panel {
+    width: 400px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #44aadd; /* Secondary Cyan Border */
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(136, 204, 238, 0.2); /* Soft glow */
+    transition: opacity 0.5s ease;
+    pointer-events: auto; /* Allows interaction when visible */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    font-size: 0.8em;
+    color: #aaa;
+    font-weight: 300;
+}
+.love-note {
+    color: #ff69b4; /* Personal Pink Accent for the Heart */
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.3); /* Subtle internal glow */
+}
